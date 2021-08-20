@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { Ng2ckeditorComponent } from './ng2ckeditor/ng2ckeditor.component';
 import { NgxeditorComponent } from './ngxeditor/ngxeditor.component';
 import { Ckeditor5angularComponent } from './ckeditor5angular/ckeditor5angular.component';
+import { TinymceComponent } from './tinymce/tinymce.component';
+
 import { FormsModule } from '@angular/forms';
 
 // CKEDITOR-MODULE STARTS
@@ -16,19 +18,26 @@ import { CKEditorModule } from 'ng2-ckeditor';
 import { NgxEditorModule } from 'ngx-editor';
 // NgxEditorModule-MODULE ENDS
 
+// tinymce-MODULE STARTS
+import { EditorModule } from '@tinymce/tinymce-angular';
+// tinymce-MODULE ENDS
+
+
 @NgModule({
   declarations: [
     AppComponent,
     Ng2ckeditorComponent,
     NgxeditorComponent,
-    Ckeditor5angularComponent
+    Ckeditor5angularComponent,
+    TinymceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     CKEditorModule,
-    NgxEditorModule
+    NgxEditorModule,
+    EditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
