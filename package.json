@@ -22,6 +22,7 @@
     "@types/ckeditor": "^4.9.10",
     "ng2-ckeditor": "^1.3.4",
     "ngx-editor": "^10.1.0",
+    "ngx-editor-imageupload": "^4.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
