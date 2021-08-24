@@ -14,11 +14,31 @@ export class Ng2ckeditorComponent implements OnInit {
 
   ngOnInit(): void {
     this.ckeConfig = {
-      allowedContent: false,
+      // allowedContent: false,
+      
+      /** allow custom classes */
+      allowedContent: true,
+
+      // builtinPlugins: [ImageResize],
+
+      /** enable upload image button with file upload dialog */
       extraPlugins: 'divarea,easyimage',
       forcePasteAsPlainText: true,
-      // filebrowserUploadUrl: 'http://localhost:3000/products/upload-images/611ded7eaccdfd2b3c7e524f',
-      cloudServices_tokenUrl:'http://localhost:3000/products/upload-images/611ded7eaccdfd2b3c7e524f'
+
+      /** Allow to upload PNG and JPG. */
+      imageAllowedTypes: ['jpeg', 'jpg', 'png'],
+
+      /** image buttons */
+      // imageEditButtons: ['imageReplace', 'imageAlign', 'imageRemove', '|', 'imageLink', 'linkOpen', 'linkEdit', 'linkRemove', '-', 'imageDisplay', 'imageStyle', 'imageAlt', 'imageSize'],
+
+      /** provide the custom param for the file upload */
+      imageUploadParam: 'profile_pic',
+
+      /** file upload url */
+      filebrowserUploadUrl: 'http://localhost:3000/products/upload-images/611e38ebb60f8e368cbc3cdd',
+
+
+      // cloudServices_tokenUrl:'http://localhost:3000/products/upload-images/611e38ebb60f8e368cbc3cdd'
     };
   }
 
